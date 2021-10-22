@@ -1,22 +1,15 @@
-// // Loop
-// const arr = [1, 2, 3, 4, 5];
-// const userMap = (array, fn) => {
-//     return fn(array);
-// };
-// const newArr = userMap(arr, (array) => {
-//     const arr = [];
-//     const length = array.length;
-//     for (let i = 0; i < length; i++) {
-//         arr.push(array[i]);
-//     }
-//     return arr;
-// });
-// console.log(newArr);
-// // Addition
-// const calAddition = (a, b) => {
-//     return a + b;
-// };
-// const showAddition = (a, b, fn) => {
-//     return fn(a, b);
-// };
-// console.log(showAddition(10, 20, calAddition));
+const sum = (a, b, check) => {
+    let res = a + b;
+    if (a > b) {
+        check(`${a} is greater then ${b} and the sum is ${res}`);
+    } else if (a < b) {
+        check(`${a} is lesser then ${b} and the sum is ${res}`);
+    } else {
+        check(`${a} and ${b} both are equal and the sum is ${res}`);
+    }
+
+}
+
+sum(10, 20, (check) => {
+    console.log(check);
+})
